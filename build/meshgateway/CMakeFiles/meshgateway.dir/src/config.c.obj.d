@@ -1,0 +1,34 @@
+meshgateway/CMakeFiles/meshgateway.dir/src/config.c.obj: \
+ E:\GiteeRepositories\TEMS\meshtastic-docs\Project\claude_mesh\meshgateway\src\config.c \
+ E:\GiteeRepositories\TEMS\meshtastic-docs\Project\claude_mesh\meshgateway\src\config.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdbool.h \
+ E:\GiteeRepositories\TEMS\meshtastic-docs\Project\claude_mesh\meshgateway\src\log.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/string.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/limits.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/malloc.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/errno.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/ctype.h \
+ D:/WorkEnvironment/x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0/mingw64/x86_64-w64-mingw32/include/corecrt_wctype.h

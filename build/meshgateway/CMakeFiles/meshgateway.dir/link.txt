@@ -1,0 +1,3 @@
+D:\WorksSoftware\Microsoft\VisualStudio\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E rm -f CMakeFiles\meshgateway.dir/objects.a
+D:\WorkEnvironment\x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0\mingw64\bin\ar.exe qc CMakeFiles\meshgateway.dir/objects.a @CMakeFiles\meshgateway.dir\objects1.rsp
+D:\WorkEnvironment\x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\meshgateway.dir/objects.a -Wl,--no-whole-archive -o meshgateway.exe -Wl,--out-implib,libmeshgateway.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\meshgateway.dir\linkLibs.rsp

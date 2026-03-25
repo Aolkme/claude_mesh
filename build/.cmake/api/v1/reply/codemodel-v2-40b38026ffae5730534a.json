@@ -1,0 +1,139 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-4ddc3bb61964eb42d088.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "libmeshcore",
+					"jsonFile" : "directory-libmeshcore-Debug-afe9afc4f49f0e45cade.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libmeshcore",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "meshgateway",
+					"jsonFile" : "directory-meshgateway-Debug-bb8ce291e132bf89905f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "meshgateway",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "meshgate-cli",
+					"jsonFile" : "directory-meshgate-cli-Debug-cf6c2dd55324637b7567.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "meshgate-cli",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "claude_mesh",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "meshcore::@30c926994df198966129",
+					"jsonFile" : "target-meshcore-Debug-12832f48958615307d51.json",
+					"name" : "meshcore",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "meshgate-cli::@e378fbd014354fea5230",
+					"jsonFile" : "target-meshgate-cli-Debug-e47f342f68949b4046c6.json",
+					"name" : "meshgate-cli",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "meshgateway::@b1642066b43fe84471f6",
+					"jsonFile" : "target-meshgateway-Debug-375fc682ff3a1503290d.json",
+					"name" : "meshgateway",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "protobuf-c-runtime::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-protobuf-c-runtime-Debug-d0666c49ef9c99b042e3.json",
+					"name" : "protobuf-c-runtime",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/GiteeRepositories/TEMS/meshtastic-docs/Project/claude_mesh/build",
+		"source" : "E:/GiteeRepositories/TEMS/meshtastic-docs/Project/claude_mesh"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
