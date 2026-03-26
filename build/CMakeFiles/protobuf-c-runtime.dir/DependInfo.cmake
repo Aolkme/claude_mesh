@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "E:/GiteeRepositories/TEMS/meshtastic-docs/Project/claude_mesh/protobuf-c-master/protobuf-c/protobuf-c.c" "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-master/protobuf-c/protobuf-c.c.obj" "gcc" "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-master/protobuf-c/protobuf-c.c.obj.d"
+  "/home/olkme/桌面/github-project/claude_mesh/protobuf-c-1.5.2/protobuf-c/protobuf-c.c" "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-1.5.2/protobuf-c/protobuf-c.c.o" "gcc" "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-1.5.2/protobuf-c/protobuf-c.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

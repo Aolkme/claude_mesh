@@ -16,14 +16,14 @@ if(MSVC)
 else()
     add_compile_options(-Wall -Wextra -Wno-unused-parameter)
 endif()
-set(PROTOBUF_C_SRC_DIR ${CMAKE_SOURCE_DIR}/protobuf-c-master/protobuf-c)
+set(PROTOBUF_C_SRC_DIR ${CMAKE_SOURCE_DIR}/protobuf-c-1.5.2/protobuf-c)
 add_library(protobuf-c-runtime STATIC
     ${PROTOBUF_C_SRC_DIR}/protobuf-c.c
 )
-target_include_directories(protobuf-c-runtime PUBLIC ${CMAKE_SOURCE_DIR}/protobuf-c-master)
+target_include_directories(protobuf-c-runtime PUBLIC ${CMAKE_SOURCE_DIR}/protobuf-c-1.5.2)
 # 直接设置变量，子目录自动继承（不使用 PARENT_SCOPE）
 set(PROTOBUF_C_RUNTIME_LIB protobuf-c-runtime)
-set(PROTOBUF_C_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/protobuf-c-master)
+set(PROTOBUF_C_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/protobuf-c-1.5.2)
 set(PROTO_DIR ${CMAKE_SOURCE_DIR}/protobufs_protobuf-c)
 add_subdirectory(libmeshcore)
 add_subdirectory(meshgateway)

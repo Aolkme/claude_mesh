@@ -1,2 +1,2 @@
-D:\WorkEnvironment\x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0\mingw64\bin\ar.exe qc libprotobuf-c-runtime.a "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-master/protobuf-c/protobuf-c.c.obj"
-D:\WorkEnvironment\x86_64-15.2.0-release-win32-seh-msvcrt-rt_v13-rev0\mingw64\bin\ranlib.exe libprotobuf-c-runtime.a
+/usr/bin/ar qc libprotobuf-c-runtime.a "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-1.5.2/protobuf-c/protobuf-c.c.o"
+/usr/bin/ranlib libprotobuf-c-runtime.a

@@ -1,13 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/meshgate-cli.dir/src/main.c.obj"
-  "CMakeFiles/meshgate-cli.dir/src/main.c.obj.d"
-  "CMakeFiles/meshgate-cli.dir/src/output_format.c.obj"
-  "CMakeFiles/meshgate-cli.dir/src/output_format.c.obj.d"
-  "CMakeFiles/meshgate-cli.dir/src/tcp_client.c.obj"
-  "CMakeFiles/meshgate-cli.dir/src/tcp_client.c.obj.d"
-  "libmeshgate-cli.dll.a"
-  "meshgate-cli.exe"
-  "meshgate-cli.exe.manifest"
+  "CMakeFiles/meshgate-cli.dir/src/main.c.o"
+  "CMakeFiles/meshgate-cli.dir/src/main.c.o.d"
+  "CMakeFiles/meshgate-cli.dir/src/output_format.c.o"
+  "CMakeFiles/meshgate-cli.dir/src/output_format.c.o.d"
+  "CMakeFiles/meshgate-cli.dir/src/tcp_client.c.o"
+  "CMakeFiles/meshgate-cli.dir/src/tcp_client.c.o.d"
+  "meshgate-cli"
   "meshgate-cli.pdb"
 )
 

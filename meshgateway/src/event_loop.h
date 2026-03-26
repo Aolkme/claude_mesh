@@ -10,6 +10,7 @@
 #include "../libmeshcore/include/frame_parser.h"
 #include "../libmeshcore/include/proto_parser.h"
 #include "../libmeshcore/include/heartbeat.h"
+#include "../libmeshcore/include/node_manager.h"
 #include "command_handler.h"
 #include <stdbool.h>
 

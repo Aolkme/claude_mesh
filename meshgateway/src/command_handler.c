@@ -51,7 +51,7 @@ static char *cmd_get_status(gateway_state_t *gs) {
     long uptime = (long)(now - gs->start_time);
     int node_count = node_manager_get_count();
     char node_id[MESH_NODE_ID_LEN] = "unknown";
-    if (gs->my_node_num) mesh_node_num_to_id(gs->my_node_num, node_id);
+    if (gs->my_node_num) mesh_node_num_to_id(gs->my_node_num, node_id, sizeof(node_id));
 
     char *resp = (char *)malloc(512);
     snprintf(resp, 512,
@@ -114,7 +114,6 @@ static char *cmd_get_nodes(void) {
 static char *cmd_send_text(const char *json, gateway_state_t *gs) {
     char to_id[MESH_NODE_ID_LEN] = "";
     char text[256] = "";
-    char tmp[MESH_NODE_ID_LEN];
 
     if (!json_get_str(json, "to",   to_id, sizeof(to_id)))
         return strdup("{\"status\":\"error\",\"error\":\"missing 'to' field\"}");

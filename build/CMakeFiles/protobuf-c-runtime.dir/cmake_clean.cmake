@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-master/protobuf-c/protobuf-c.c.obj"
-  "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-master/protobuf-c/protobuf-c.c.obj.d"
+  "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-1.5.2/protobuf-c/protobuf-c.c.o"
+  "CMakeFiles/protobuf-c-runtime.dir/protobuf-c-1.5.2/protobuf-c/protobuf-c.c.o.d"
   "libprotobuf-c-runtime.a"
   "libprotobuf-c-runtime.pdb"
 )

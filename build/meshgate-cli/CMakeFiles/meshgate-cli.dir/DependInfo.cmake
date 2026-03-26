@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "E:/GiteeRepositories/TEMS/meshtastic-docs/Project/claude_mesh/meshgate-cli/src/main.c" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/main.c.obj" "gcc" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/main.c.obj.d"
-  "E:/GiteeRepositories/TEMS/meshtastic-docs/Project/claude_mesh/meshgate-cli/src/output_format.c" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/output_format.c.obj" "gcc" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/output_format.c.obj.d"
-  "E:/GiteeRepositories/TEMS/meshtastic-docs/Project/claude_mesh/meshgate-cli/src/tcp_client.c" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/tcp_client.c.obj" "gcc" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/tcp_client.c.obj.d"
+  "/home/olkme/桌面/github-project/claude_mesh/meshgate-cli/src/main.c" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/main.c.o" "gcc" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/main.c.o.d"
+  "/home/olkme/桌面/github-project/claude_mesh/meshgate-cli/src/output_format.c" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/output_format.c.o" "gcc" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/output_format.c.o.d"
+  "/home/olkme/桌面/github-project/claude_mesh/meshgate-cli/src/tcp_client.c" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/tcp_client.c.o" "gcc" "meshgate-cli/CMakeFiles/meshgate-cli.dir/src/tcp_client.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
