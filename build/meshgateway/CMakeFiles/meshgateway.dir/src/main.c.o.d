@@ -83,6 +83,55 @@ meshgateway/CMakeFiles/meshgateway.dir/src/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
  /home/olkme/桌面/github-project/claude_mesh/meshgateway/src/tcp_server.h \
+ /home/olkme/桌面/github-project/claude_mesh/meshgateway/src/web_server.h \
+ /home/olkme/桌面/github-project/claude_mesh/third_party/mongoose/mongoose.h \
+ /usr/include/arpa/inet.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/sys/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/x86_64-linux-gnu/bits/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+ /usr/include/x86_64-linux-gnu/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/x86_64-linux-gnu/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/ctype.h \
+ /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
+ /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/x86_64-linux-gnu/bits/dirent_ext.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/netdb.h /usr/include/rpc/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/netdb.h /usr/include/netinet/tcp.h \
+ /usr/include/x86_64-linux-gnu/sys/epoll.h \
+ /usr/include/x86_64-linux-gnu/bits/epoll.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /home/olkme/桌面/github-project/claude_mesh/meshgateway/src/event_loop.h \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/serial_port.h \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/frame_parser.h \
@@ -91,4 +140,5 @@ meshgateway/CMakeFiles/meshgateway.dir/src/main.c.o: \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/heartbeat.h \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/node_manager.h \
  /home/olkme/桌面/github-project/claude_mesh/meshgateway/src/command_handler.h \
+ /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/frame_builder.h \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/mesh_types.h

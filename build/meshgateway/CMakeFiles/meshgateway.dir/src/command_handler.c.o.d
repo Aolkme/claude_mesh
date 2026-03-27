@@ -49,7 +49,12 @@ meshgateway/CMakeFiles/meshgateway.dir/src/command_handler.c.o: \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/node_manager.h \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/mesh_types.h \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/proto_parser.h \
+ /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/proto_builder.h \
+ /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/admin_builder.h \
+ /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/frame_builder.h \
+ /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/serial_port.h \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/../libmeshcore/include/mesh_types.h \
+ /home/olkme/桌面/github-project/claude_mesh/third_party/cJSON/cJSON.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/endian.h \

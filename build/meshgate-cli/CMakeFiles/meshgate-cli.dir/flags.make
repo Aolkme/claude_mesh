@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/olkme/桌面/github-project/claude_mesh/meshgate-cli/src
+C_INCLUDES = -I/home/olkme/桌面/github-project/claude_mesh/meshgate-cli/src -I/home/olkme/桌面/github-project/claude_mesh/third_party/cJSON
 
 C_FLAGS = -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter
 

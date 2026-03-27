@@ -10,11 +10,12 @@ add_executable(meshgate-cli ${CLI_SOURCES})
 
 target_include_directories(meshgate-cli PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/third_party/cJSON
 )
 
 # CLI only needs platform socket libs, not the full meshcore
 if(WIN32)
-    target_link_libraries(meshgate-cli PRIVATE ws2_32)
+    target_link_libraries(meshgate-cli PRIVATE cjson ws2_32)
 else()
-    target_link_libraries(meshgate-cli PRIVATE m)
+    target_link_libraries(meshgate-cli PRIVATE cjson m)
 endif()

@@ -153,6 +153,34 @@ meshgateway/CMakeFiles/meshgateway.dir/src/command_handler.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshgateway.dir/src/command_handler.c.s"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/meshgateway && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/meshgateway/src/command_handler.c -o CMakeFiles/meshgateway.dir/src/command_handler.c.s
 
+meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.o: meshgateway/CMakeFiles/meshgateway.dir/flags.make
+meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.o: /home/olkme/桌面/github-project/claude_mesh/meshgateway/src/web_server.c
+meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.o: meshgateway/CMakeFiles/meshgateway.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.o"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/meshgateway && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.o -MF CMakeFiles/meshgateway.dir/src/web_server.c.o.d -o CMakeFiles/meshgateway.dir/src/web_server.c.o -c /home/olkme/桌面/github-project/claude_mesh/meshgateway/src/web_server.c
+
+meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/meshgateway.dir/src/web_server.c.i"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/meshgateway && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/olkme/桌面/github-project/claude_mesh/meshgateway/src/web_server.c > CMakeFiles/meshgateway.dir/src/web_server.c.i
+
+meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshgateway.dir/src/web_server.c.s"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/meshgateway && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/meshgateway/src/web_server.c -o CMakeFiles/meshgateway.dir/src/web_server.c.s
+
+meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o: meshgateway/CMakeFiles/meshgateway.dir/flags.make
+meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o: /home/olkme/桌面/github-project/claude_mesh/third_party/mongoose/mongoose.c
+meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o: meshgateway/CMakeFiles/meshgateway.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/meshgateway && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o -MF CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o.d -o CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o -c /home/olkme/桌面/github-project/claude_mesh/third_party/mongoose/mongoose.c
+
+meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.i"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/meshgateway && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/olkme/桌面/github-project/claude_mesh/third_party/mongoose/mongoose.c > CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.i
+
+meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.s"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/meshgateway && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/third_party/mongoose/mongoose.c -o CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.s
+
 # Object files for target meshgateway
 meshgateway_OBJECTS = \
 "CMakeFiles/meshgateway.dir/src/main.c.o" \
@@ -160,7 +188,9 @@ meshgateway_OBJECTS = \
 "CMakeFiles/meshgateway.dir/src/log.c.o" \
 "CMakeFiles/meshgateway.dir/src/event_loop.c.o" \
 "CMakeFiles/meshgateway.dir/src/tcp_server.c.o" \
-"CMakeFiles/meshgateway.dir/src/command_handler.c.o"
+"CMakeFiles/meshgateway.dir/src/command_handler.c.o" \
+"CMakeFiles/meshgateway.dir/src/web_server.c.o" \
+"CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o"
 
 # External object files for target meshgateway
 meshgateway_EXTERNAL_OBJECTS =
@@ -171,11 +201,14 @@ meshgateway/meshgateway: meshgateway/CMakeFiles/meshgateway.dir/src/log.c.o
 meshgateway/meshgateway: meshgateway/CMakeFiles/meshgateway.dir/src/event_loop.c.o
 meshgateway/meshgateway: meshgateway/CMakeFiles/meshgateway.dir/src/tcp_server.c.o
 meshgateway/meshgateway: meshgateway/CMakeFiles/meshgateway.dir/src/command_handler.c.o
+meshgateway/meshgateway: meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.o
+meshgateway/meshgateway: meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o
 meshgateway/meshgateway: meshgateway/CMakeFiles/meshgateway.dir/build.make
 meshgateway/meshgateway: libmeshcore/libmeshcore.a
+meshgateway/meshgateway: libcjson.a
 meshgateway/meshgateway: libprotobuf-c-runtime.a
 meshgateway/meshgateway: meshgateway/CMakeFiles/meshgateway.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable meshgateway"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable meshgateway"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/meshgateway && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/meshgateway.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

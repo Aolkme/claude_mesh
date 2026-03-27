@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/olkme/桌面/github-project/claude_mesh/meshgateway/src -I/home/olkme/桌面/github-project/claude_mesh/libmeshcore/include -I/home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c -I/home/olkme/桌面/github-project/claude_mesh/protobuf-c-1.5.2
+C_INCLUDES = -I/home/olkme/桌面/github-project/claude_mesh/meshgateway/src -I/home/olkme/桌面/github-project/claude_mesh/third_party/mongoose -I/home/olkme/桌面/github-project/claude_mesh/third_party/cJSON -I/home/olkme/桌面/github-project/claude_mesh/libmeshcore/include -I/home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c -I/home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/thingseye -I/home/olkme/桌面/github-project/claude_mesh/protobuf-c-1.5.2
 
 C_FLAGS = -g -std=gnu11 -Wall -Wextra -Wno-unused-parameter
 

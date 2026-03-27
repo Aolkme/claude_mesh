@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/olkme/桌面/github-project/claude_mesh/build
 
 # The main recursive "all" target.
 all: CMakeFiles/protobuf-c-runtime.dir/all
+all: CMakeFiles/cjson.dir/all
 all: libmeshcore/all
 all: meshgateway/all
 all: meshgate-cli/all
@@ -77,6 +78,7 @@ preinstall: meshgate-cli/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/protobuf-c-runtime.dir/clean
+clean: CMakeFiles/cjson.dir/clean
 clean: libmeshcore/clean
 clean: meshgateway/clean
 clean: meshgate-cli/clean
@@ -134,7 +136,7 @@ meshgateway/clean: meshgateway/CMakeFiles/meshgateway.dir/clean
 CMakeFiles/protobuf-c-runtime.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf-c-runtime.dir/build.make CMakeFiles/protobuf-c-runtime.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf-c-runtime.dir/build.make CMakeFiles/protobuf-c-runtime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=38,39 "Built target protobuf-c-runtime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=46,47 "Built target protobuf-c-runtime"
 .PHONY : CMakeFiles/protobuf-c-runtime.dir/all
 
 # Build rule for subdir invocation for target.
@@ -154,18 +156,44 @@ CMakeFiles/protobuf-c-runtime.dir/clean:
 .PHONY : CMakeFiles/protobuf-c-runtime.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/cjson.dir
+
+# All Build rule for target.
+CMakeFiles/cjson.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cjson.dir/build.make CMakeFiles/cjson.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cjson.dir/build.make CMakeFiles/cjson.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=1,2 "Built target cjson"
+.PHONY : CMakeFiles/cjson.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cjson.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cjson.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 0
+.PHONY : CMakeFiles/cjson.dir/rule
+
+# Convenience name for target.
+cjson: CMakeFiles/cjson.dir/rule
+.PHONY : cjson
+
+# clean rule for target.
+CMakeFiles/cjson.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cjson.dir/build.make CMakeFiles/cjson.dir/clean
+.PHONY : CMakeFiles/cjson.dir/clean
+
+#=============================================================================
 # Target rules for target libmeshcore/CMakeFiles/meshcore.dir
 
 # All Build rule for target.
 libmeshcore/CMakeFiles/meshcore.dir/all: CMakeFiles/protobuf-c-runtime.dir/all
 	$(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/depend
 	$(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target meshcore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 "Built target meshcore"
 .PHONY : libmeshcore/CMakeFiles/meshcore.dir/all
 
 # Build rule for subdir invocation for target.
 libmeshcore/CMakeFiles/meshcore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 32
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libmeshcore/CMakeFiles/meshcore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 0
 .PHONY : libmeshcore/CMakeFiles/meshcore.dir/rule
@@ -184,15 +212,16 @@ libmeshcore/CMakeFiles/meshcore.dir/clean:
 
 # All Build rule for target.
 meshgateway/CMakeFiles/meshgateway.dir/all: CMakeFiles/protobuf-c-runtime.dir/all
+meshgateway/CMakeFiles/meshgateway.dir/all: CMakeFiles/cjson.dir/all
 meshgateway/CMakeFiles/meshgateway.dir/all: libmeshcore/CMakeFiles/meshcore.dir/all
 	$(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/depend
 	$(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=31,32,33,34,35,36,37 "Built target meshgateway"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=37,38,39,40,41,42,43,44,45 "Built target meshgateway"
 .PHONY : meshgateway/CMakeFiles/meshgateway.dir/all
 
 # Build rule for subdir invocation for target.
 meshgateway/CMakeFiles/meshgateway.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 43
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 meshgateway/CMakeFiles/meshgateway.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 0
 .PHONY : meshgateway/CMakeFiles/meshgateway.dir/rule
@@ -210,15 +239,15 @@ meshgateway/CMakeFiles/meshgateway.dir/clean:
 # Target rules for target meshgate-cli/CMakeFiles/meshgate-cli.dir
 
 # All Build rule for target.
-meshgate-cli/CMakeFiles/meshgate-cli.dir/all:
+meshgate-cli/CMakeFiles/meshgate-cli.dir/all: CMakeFiles/cjson.dir/all
 	$(MAKE) $(MAKESILENT) -f meshgate-cli/CMakeFiles/meshgate-cli.dir/build.make meshgate-cli/CMakeFiles/meshgate-cli.dir/depend
 	$(MAKE) $(MAKESILENT) -f meshgate-cli/CMakeFiles/meshgate-cli.dir/build.make meshgate-cli/CMakeFiles/meshgate-cli.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=27,28,29,30 "Built target meshgate-cli"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=33,34,35,36 "Built target meshgate-cli"
 .PHONY : meshgate-cli/CMakeFiles/meshgate-cli.dir/all
 
 # Build rule for subdir invocation for target.
 meshgate-cli/CMakeFiles/meshgate-cli.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 meshgate-cli/CMakeFiles/meshgate-cli.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles 0
 .PHONY : meshgate-cli/CMakeFiles/meshgate-cli.dir/rule

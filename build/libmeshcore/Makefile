@@ -655,6 +655,78 @@ __/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.s:
 	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.s
 .PHONY : __/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.s
 
+__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.o: __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o
+.PHONY : __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.o
+
+# target to build an object file
+__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o
+.PHONY : __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o
+
+__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.i: __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.i
+.PHONY : __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.i
+
+# target to preprocess a source file
+__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.i:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.i
+.PHONY : __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.i
+
+__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.s: __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.s
+.PHONY : __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.s
+
+# target to generate assembly for a file
+__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.s:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.s
+.PHONY : __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.s
+
+src/admin_builder.o: src/admin_builder.c.o
+.PHONY : src/admin_builder.o
+
+# target to build an object file
+src/admin_builder.c.o:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.o
+.PHONY : src/admin_builder.c.o
+
+src/admin_builder.i: src/admin_builder.c.i
+.PHONY : src/admin_builder.i
+
+# target to preprocess a source file
+src/admin_builder.c.i:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.i
+.PHONY : src/admin_builder.c.i
+
+src/admin_builder.s: src/admin_builder.c.s
+.PHONY : src/admin_builder.s
+
+# target to generate assembly for a file
+src/admin_builder.c.s:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.s
+.PHONY : src/admin_builder.c.s
+
+src/frame_builder.o: src/frame_builder.c.o
+.PHONY : src/frame_builder.o
+
+# target to build an object file
+src/frame_builder.c.o:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.o
+.PHONY : src/frame_builder.c.o
+
+src/frame_builder.i: src/frame_builder.c.i
+.PHONY : src/frame_builder.i
+
+# target to preprocess a source file
+src/frame_builder.c.i:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.i
+.PHONY : src/frame_builder.c.i
+
+src/frame_builder.s: src/frame_builder.c.s
+.PHONY : src/frame_builder.s
+
+# target to generate assembly for a file
+src/frame_builder.c.s:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.s
+.PHONY : src/frame_builder.c.s
+
 src/frame_parser.o: src/frame_parser.c.o
 .PHONY : src/frame_parser.o
 
@@ -726,6 +798,30 @@ src/node_manager.s: src/node_manager.c.s
 src/node_manager.c.s:
 	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.s
 .PHONY : src/node_manager.c.s
+
+src/proto_builder.o: src/proto_builder.c.o
+.PHONY : src/proto_builder.o
+
+# target to build an object file
+src/proto_builder.c.o:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.o
+.PHONY : src/proto_builder.c.o
+
+src/proto_builder.i: src/proto_builder.c.i
+.PHONY : src/proto_builder.i
+
+# target to preprocess a source file
+src/proto_builder.c.i:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.i
+.PHONY : src/proto_builder.c.i
+
+src/proto_builder.s: src/proto_builder.c.s
+.PHONY : src/proto_builder.s
+
+# target to generate assembly for a file
+src/proto_builder.c.s:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f libmeshcore/CMakeFiles/meshcore.dir/build.make libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.s
+.PHONY : src/proto_builder.c.s
 
 src/proto_parser.o: src/proto_parser.c.o
 .PHONY : src/proto_parser.o
@@ -848,6 +944,15 @@ help:
 	@echo "... __/protobufs_protobuf-c/meshtastic/xmodem.pb-c.o"
 	@echo "... __/protobufs_protobuf-c/meshtastic/xmodem.pb-c.i"
 	@echo "... __/protobufs_protobuf-c/meshtastic/xmodem.pb-c.s"
+	@echo "... __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.o"
+	@echo "... __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.i"
+	@echo "... __/protobufs_protobuf-c/thingseye/privateconfig.pb-c.s"
+	@echo "... src/admin_builder.o"
+	@echo "... src/admin_builder.i"
+	@echo "... src/admin_builder.s"
+	@echo "... src/frame_builder.o"
+	@echo "... src/frame_builder.i"
+	@echo "... src/frame_builder.s"
 	@echo "... src/frame_parser.o"
 	@echo "... src/frame_parser.i"
 	@echo "... src/frame_parser.s"
@@ -857,6 +962,9 @@ help:
 	@echo "... src/node_manager.o"
 	@echo "... src/node_manager.i"
 	@echo "... src/node_manager.s"
+	@echo "... src/proto_builder.o"
+	@echo "... src/proto_builder.i"
+	@echo "... src/proto_builder.s"
 	@echo "... src/proto_parser.o"
 	@echo "... src/proto_parser.i"
 	@echo "... src/proto_parser.s"

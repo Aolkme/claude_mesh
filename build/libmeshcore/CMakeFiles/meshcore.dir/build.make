@@ -83,10 +83,24 @@ libmeshcore/CMakeFiles/meshcore.dir/src/frame_parser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshcore.dir/src/frame_parser.c.s"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/frame_parser.c -o CMakeFiles/meshcore.dir/src/frame_parser.c.s
 
+libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
+libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.o: /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/frame_builder.c
+libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.o"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.o -MF CMakeFiles/meshcore.dir/src/frame_builder.c.o.d -o CMakeFiles/meshcore.dir/src/frame_builder.c.o -c /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/frame_builder.c
+
+libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/meshcore.dir/src/frame_builder.c.i"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/frame_builder.c > CMakeFiles/meshcore.dir/src/frame_builder.c.i
+
+libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshcore.dir/src/frame_builder.c.s"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/frame_builder.c -o CMakeFiles/meshcore.dir/src/frame_builder.c.s
+
 libmeshcore/CMakeFiles/meshcore.dir/src/serial_port.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/src/serial_port.c.o: /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/serial_port.c
 libmeshcore/CMakeFiles/meshcore.dir/src/serial_port.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/serial_port.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/serial_port.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/src/serial_port.c.o -MF CMakeFiles/meshcore.dir/src/serial_port.c.o.d -o CMakeFiles/meshcore.dir/src/serial_port.c.o -c /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/serial_port.c
 
 libmeshcore/CMakeFiles/meshcore.dir/src/serial_port.c.i: cmake_force
@@ -100,7 +114,7 @@ libmeshcore/CMakeFiles/meshcore.dir/src/serial_port.c.s: cmake_force
 libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.o: /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/proto_parser.c
 libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.o -MF CMakeFiles/meshcore.dir/src/proto_parser.c.o.d -o CMakeFiles/meshcore.dir/src/proto_parser.c.o -c /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/proto_parser.c
 
 libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.i: cmake_force
@@ -111,10 +125,38 @@ libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshcore.dir/src/proto_parser.c.s"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/proto_parser.c -o CMakeFiles/meshcore.dir/src/proto_parser.c.s
 
+libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
+libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.o: /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/proto_builder.c
+libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.o"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.o -MF CMakeFiles/meshcore.dir/src/proto_builder.c.o.d -o CMakeFiles/meshcore.dir/src/proto_builder.c.o -c /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/proto_builder.c
+
+libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/meshcore.dir/src/proto_builder.c.i"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/proto_builder.c > CMakeFiles/meshcore.dir/src/proto_builder.c.i
+
+libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshcore.dir/src/proto_builder.c.s"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/proto_builder.c -o CMakeFiles/meshcore.dir/src/proto_builder.c.s
+
+libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
+libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.o: /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/admin_builder.c
+libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.o"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.o -MF CMakeFiles/meshcore.dir/src/admin_builder.c.o.d -o CMakeFiles/meshcore.dir/src/admin_builder.c.o -c /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/admin_builder.c
+
+libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/meshcore.dir/src/admin_builder.c.i"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/admin_builder.c > CMakeFiles/meshcore.dir/src/admin_builder.c.i
+
+libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshcore.dir/src/admin_builder.c.s"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/admin_builder.c -o CMakeFiles/meshcore.dir/src/admin_builder.c.s
+
 libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.o: /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/node_manager.c
 libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.o -MF CMakeFiles/meshcore.dir/src/node_manager.c.o.d -o CMakeFiles/meshcore.dir/src/node_manager.c.o -c /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/node_manager.c
 
 libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.i: cmake_force
@@ -128,7 +170,7 @@ libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.s: cmake_force
 libmeshcore/CMakeFiles/meshcore.dir/src/heartbeat.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/src/heartbeat.c.o: /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/heartbeat.c
 libmeshcore/CMakeFiles/meshcore.dir/src/heartbeat.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/heartbeat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object libmeshcore/CMakeFiles/meshcore.dir/src/heartbeat.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/src/heartbeat.c.o -MF CMakeFiles/meshcore.dir/src/heartbeat.c.o.d -o CMakeFiles/meshcore.dir/src/heartbeat.c.o -c /home/olkme/桌面/github-project/claude_mesh/libmeshcore/src/heartbeat.c
 
 libmeshcore/CMakeFiles/meshcore.dir/src/heartbeat.c.i: cmake_force
@@ -142,7 +184,7 @@ libmeshcore/CMakeFiles/meshcore.dir/src/heartbeat.c.s: cmake_force
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/admin.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/admin.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.i: cmake_force
@@ -156,7 +198,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/apponly.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/apponly.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.pb-c.c.i: cmake_force
@@ -170,7 +212,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/apponly.p
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/atak.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/atak.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c.c.i: cmake_force
@@ -184,7 +226,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/atak.pb-c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmessages.pb-c.c.i: cmake_force
@@ -198,7 +240,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/cannedmes
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/channel.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/channel.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.pb-c.c.i: cmake_force
@@ -212,7 +254,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/channel.p
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonly.pb-c.c.i: cmake_force
@@ -226,7 +268,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/clientonl
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/config.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/config.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb-c.c.i: cmake_force
@@ -240,7 +282,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/config.pb
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connection_status.pb-c.c.i: cmake_force
@@ -254,7 +296,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/connectio
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/localonly.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/localonly.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly.pb-c.c.i: cmake_force
@@ -268,7 +310,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/localonly
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/mesh.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/mesh.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c.c.i: cmake_force
@@ -282,7 +324,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mesh.pb-c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_config.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_config.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/module_config.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_config.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_config.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_config.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_config.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_config.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_config.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/module_config.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_config.pb-c.c.i: cmake_force
@@ -296,7 +338,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/module_co
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c.c.i: cmake_force
@@ -310,7 +352,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/mqtt.pb-c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.pb-c.c.i: cmake_force
@@ -324,7 +366,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/paxcount.
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/portnums.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/portnums.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.pb-c.c.i: cmake_force
@@ -338,7 +380,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/portnums.
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/powermon.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/powermon.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.pb-c.c.i: cmake_force
@@ -352,7 +394,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/powermon.
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_hardware.pb-c.c.i: cmake_force
@@ -366,7 +408,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/remote_ha
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.i: cmake_force
@@ -380,7 +422,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.i: cmake_force
@@ -394,7 +436,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforw
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.i: cmake_force
@@ -408,7 +450,7 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c
 
 libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.i: cmake_force
@@ -419,11 +461,28 @@ libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.s"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.s
 
+libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/flags.make
+libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o: /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c
+libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o: libmeshcore/CMakeFiles/meshcore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o -MF CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o.d -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o -c /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c
+
+libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.i"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c > CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.i
+
+libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.s"
+	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c -o CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.s
+
 # Object files for target meshcore
 meshcore_OBJECTS = \
 "CMakeFiles/meshcore.dir/src/frame_parser.c.o" \
+"CMakeFiles/meshcore.dir/src/frame_builder.c.o" \
 "CMakeFiles/meshcore.dir/src/serial_port.c.o" \
 "CMakeFiles/meshcore.dir/src/proto_parser.c.o" \
+"CMakeFiles/meshcore.dir/src/proto_builder.c.o" \
+"CMakeFiles/meshcore.dir/src/admin_builder.c.o" \
 "CMakeFiles/meshcore.dir/src/node_manager.c.o" \
 "CMakeFiles/meshcore.dir/src/heartbeat.c.o" \
 "CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o" \
@@ -445,14 +504,18 @@ meshcore_OBJECTS = \
 "CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/rtttl.pb-c.c.o" \
 "CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o" \
 "CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o" \
-"CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o"
+"CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o" \
+"CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o"
 
 # External object files for target meshcore
 meshcore_EXTERNAL_OBJECTS =
 
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/src/frame_parser.c.o
+libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/src/frame_builder.c.o
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/src/serial_port.c.o
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.o
+libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/src/proto_builder.c.o
+libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/src/admin_builder.c.o
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/src/node_manager.c.o
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/src/heartbeat.c.o
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/admin.pb-c.c.o
@@ -475,9 +538,10 @@ libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_prot
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/storeforward.pb-c.c.o
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/telemetry.pb-c.c.o
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/meshtastic/xmodem.pb-c.c.o
+libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/__/protobufs_protobuf-c/thingseye/privateconfig.pb-c.c.o
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/build.make
 libmeshcore/libmeshcore.a: libmeshcore/CMakeFiles/meshcore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking C static library libmeshcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking C static library libmeshcore.a"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && $(CMAKE_COMMAND) -P CMakeFiles/meshcore.dir/cmake_clean_target.cmake
 	cd /home/olkme/桌面/github-project/claude_mesh/build/libmeshcore && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/meshcore.dir/link.txt --verbose=$(VERBOSE)
 

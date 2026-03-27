@@ -1,4 +1,5 @@
 /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles/protobuf-c-runtime.dir
+/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles/cjson.dir
 /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles/edit_cache.dir
 /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles/rebuild_cache.dir
 /home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles/list_install_components.dir

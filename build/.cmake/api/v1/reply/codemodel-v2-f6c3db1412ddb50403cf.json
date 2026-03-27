@@ -13,7 +13,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-b45e0f8bb95a1f867d58.json",
+					"jsonFile" : "directory-.-Debug-50044a5b59bcac54f17d.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.15"
@@ -22,7 +22,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						3
+						0,
+						4
 					]
 				},
 				{
@@ -37,7 +38,7 @@
 					"source" : "libmeshcore",
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -52,7 +53,7 @@
 					"source" : "meshgateway",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -67,7 +68,7 @@
 					"source" : "meshgate-cli",
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				}
 			],
@@ -88,30 +89,38 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
 			"targets" : 
 			[
 				{
+					"directoryIndex" : 0,
+					"id" : "cjson::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cjson-Debug-5a2b38f73e4c83281e3c.json",
+					"name" : "cjson",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 1,
 					"id" : "meshcore::@30c926994df198966129",
-					"jsonFile" : "target-meshcore-Debug-252c73e8d87dac6d336b.json",
+					"jsonFile" : "target-meshcore-Debug-fa8050b3d4ddae83beda.json",
 					"name" : "meshcore",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "meshgate-cli::@e378fbd014354fea5230",
-					"jsonFile" : "target-meshgate-cli-Debug-088de326923a9c88645f.json",
+					"jsonFile" : "target-meshgate-cli-Debug-8726051f2a1a610be6f1.json",
 					"name" : "meshgate-cli",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "meshgateway::@b1642066b43fe84471f6",
-					"jsonFile" : "target-meshgateway-Debug-8dfffa6ac9dac169ee54.json",
+					"jsonFile" : "target-meshgateway-Debug-d04b62736aee8cae6af0.json",
 					"name" : "meshgateway",
 					"projectIndex" : 0
 				},

@@ -25,6 +25,15 @@ target_include_directories(protobuf-c-runtime PUBLIC ${CMAKE_SOURCE_DIR}/protobu
 set(PROTOBUF_C_RUNTIME_LIB protobuf-c-runtime)
 set(PROTOBUF_C_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/protobuf-c-1.5.2)
 set(PROTO_DIR ${CMAKE_SOURCE_DIR}/protobufs_protobuf-c)
+
+# ─── cJSON 单文件库 ───
+add_library(cjson STATIC
+    ${CMAKE_SOURCE_DIR}/third_party/cJSON/cJSON.c
+)
+target_include_directories(cjson PUBLIC
+    ${CMAKE_SOURCE_DIR}/third_party/cJSON
+)
+
 add_subdirectory(libmeshcore)
 add_subdirectory(meshgateway)
 add_subdirectory(meshgate-cli)

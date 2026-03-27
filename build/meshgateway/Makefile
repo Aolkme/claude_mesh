@@ -175,6 +175,30 @@ meshgateway/fast:
 	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/build
 .PHONY : meshgateway/fast
 
+__/third_party/mongoose/mongoose.o: __/third_party/mongoose/mongoose.c.o
+.PHONY : __/third_party/mongoose/mongoose.o
+
+# target to build an object file
+__/third_party/mongoose/mongoose.c.o:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o
+.PHONY : __/third_party/mongoose/mongoose.c.o
+
+__/third_party/mongoose/mongoose.i: __/third_party/mongoose/mongoose.c.i
+.PHONY : __/third_party/mongoose/mongoose.i
+
+# target to preprocess a source file
+__/third_party/mongoose/mongoose.c.i:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.i
+.PHONY : __/third_party/mongoose/mongoose.c.i
+
+__/third_party/mongoose/mongoose.s: __/third_party/mongoose/mongoose.c.s
+.PHONY : __/third_party/mongoose/mongoose.s
+
+# target to generate assembly for a file
+__/third_party/mongoose/mongoose.c.s:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.s
+.PHONY : __/third_party/mongoose/mongoose.c.s
+
 src/command_handler.o: src/command_handler.c.o
 .PHONY : src/command_handler.o
 
@@ -319,6 +343,30 @@ src/tcp_server.c.s:
 	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/src/tcp_server.c.s
 .PHONY : src/tcp_server.c.s
 
+src/web_server.o: src/web_server.c.o
+.PHONY : src/web_server.o
+
+# target to build an object file
+src/web_server.c.o:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.o
+.PHONY : src/web_server.c.o
+
+src/web_server.i: src/web_server.c.i
+.PHONY : src/web_server.i
+
+# target to preprocess a source file
+src/web_server.c.i:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.i
+.PHONY : src/web_server.c.i
+
+src/web_server.s: src/web_server.c.s
+.PHONY : src/web_server.s
+
+# target to generate assembly for a file
+src/web_server.c.s:
+	cd /home/olkme/桌面/github-project/claude_mesh/build && $(MAKE) $(MAKESILENT) -f meshgateway/CMakeFiles/meshgateway.dir/build.make meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.s
+.PHONY : src/web_server.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -332,6 +380,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... meshgateway"
+	@echo "... __/third_party/mongoose/mongoose.o"
+	@echo "... __/third_party/mongoose/mongoose.i"
+	@echo "... __/third_party/mongoose/mongoose.s"
 	@echo "... src/command_handler.o"
 	@echo "... src/command_handler.i"
 	@echo "... src/command_handler.s"
@@ -350,6 +401,9 @@ help:
 	@echo "... src/tcp_server.o"
 	@echo "... src/tcp_server.i"
 	@echo "... src/tcp_server.s"
+	@echo "... src/web_server.o"
+	@echo "... src/web_server.i"
+	@echo "... src/web_server.s"
 .PHONY : help
 
 

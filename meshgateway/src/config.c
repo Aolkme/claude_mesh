@@ -16,14 +16,19 @@
 static void config_defaults(config_t *cfg) {
     memset(cfg, 0, sizeof(*cfg));
     strncpy(cfg->serial_device,  "",            sizeof(cfg->serial_device) - 1);
-    cfg->serial_baudrate       = 115200;
+    cfg->serial_baudrate        = 115200;
+    cfg->auto_connect           = false;
+    cfg->reconnect_interval_s   = 5;
     strncpy(cfg->tcp_host,       "127.0.0.1",   sizeof(cfg->tcp_host) - 1);
     cfg->tcp_port              = 9999;
     cfg->tcp_max_clients       = 16;
     cfg->heartbeat_interval_s  = 600;
+    cfg->heartbeat_timeout_s   = 30;
     cfg->log_level             = LOG_INFO;
     cfg->log_file[0]           = '\0';
     cfg->node_expire_s         = 3600;
+    strncpy(cfg->web_bind,       "0.0.0.0:8080", sizeof(cfg->web_bind) - 1);
+    strncpy(cfg->web_static_dir, "static",        sizeof(cfg->web_static_dir) - 1);
 }
 
 /* 去除首尾空白 */
@@ -80,19 +85,25 @@ int config_load(const char *path, config_t *cfg) {
         if (comment) { *comment = '\0'; trim(val); }
 
         if (strcmp(section, "serial") == 0) {
-            if      (strcmp(key, "device")   == 0) strncpy(cfg->serial_device, val, sizeof(cfg->serial_device) - 1);
-            else if (strcmp(key, "baudrate") == 0) cfg->serial_baudrate = (uint32_t)atoi(val);
+            if      (strcmp(key, "device")             == 0) strncpy(cfg->serial_device, val, sizeof(cfg->serial_device) - 1);
+            else if (strcmp(key, "baudrate")           == 0) cfg->serial_baudrate = (uint32_t)atoi(val);
+            else if (strcmp(key, "auto_connect")       == 0) cfg->auto_connect = (strcmp(val, "true") == 0 || strcmp(val, "1") == 0);
+            else if (strcmp(key, "reconnect_interval") == 0) cfg->reconnect_interval_s = (uint32_t)atoi(val);
         } else if (strcmp(section, "network") == 0) {
             if      (strcmp(key, "host")        == 0) strncpy(cfg->tcp_host, val, sizeof(cfg->tcp_host) - 1);
             else if (strcmp(key, "port")        == 0) cfg->tcp_port = (uint16_t)atoi(val);
             else if (strcmp(key, "max_clients") == 0) cfg->tcp_max_clients = atoi(val);
         } else if (strcmp(section, "heartbeat") == 0) {
-            if (strcmp(key, "interval") == 0) cfg->heartbeat_interval_s = (uint32_t)atoi(val);
+            if      (strcmp(key, "interval") == 0) cfg->heartbeat_interval_s = (uint32_t)atoi(val);
+            else if (strcmp(key, "timeout")  == 0) cfg->heartbeat_timeout_s  = (uint32_t)atoi(val);
         } else if (strcmp(section, "log") == 0) {
             if      (strcmp(key, "level") == 0) cfg->log_level = parse_log_level(val);
             else if (strcmp(key, "file")  == 0) strncpy(cfg->log_file, val, sizeof(cfg->log_file) - 1);
         } else if (strcmp(section, "node") == 0) {
             if (strcmp(key, "expire") == 0) cfg->node_expire_s = (uint32_t)atoi(val);
+        } else if (strcmp(section, "web") == 0) {
+            if      (strcmp(key, "bind")       == 0) strncpy(cfg->web_bind,       val, sizeof(cfg->web_bind) - 1);
+            else if (strcmp(key, "static_dir") == 0) strncpy(cfg->web_static_dir, val, sizeof(cfg->web_static_dir) - 1);
         }
     }
 

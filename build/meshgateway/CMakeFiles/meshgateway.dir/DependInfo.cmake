@@ -8,12 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/olkme/桌面/github-project/claude_mesh/third_party/mongoose/mongoose.c" "meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o" "gcc" "meshgateway/CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o.d"
   "/home/olkme/桌面/github-project/claude_mesh/meshgateway/src/command_handler.c" "meshgateway/CMakeFiles/meshgateway.dir/src/command_handler.c.o" "gcc" "meshgateway/CMakeFiles/meshgateway.dir/src/command_handler.c.o.d"
   "/home/olkme/桌面/github-project/claude_mesh/meshgateway/src/config.c" "meshgateway/CMakeFiles/meshgateway.dir/src/config.c.o" "gcc" "meshgateway/CMakeFiles/meshgateway.dir/src/config.c.o.d"
   "/home/olkme/桌面/github-project/claude_mesh/meshgateway/src/event_loop.c" "meshgateway/CMakeFiles/meshgateway.dir/src/event_loop.c.o" "gcc" "meshgateway/CMakeFiles/meshgateway.dir/src/event_loop.c.o.d"
   "/home/olkme/桌面/github-project/claude_mesh/meshgateway/src/log.c" "meshgateway/CMakeFiles/meshgateway.dir/src/log.c.o" "gcc" "meshgateway/CMakeFiles/meshgateway.dir/src/log.c.o.d"
   "/home/olkme/桌面/github-project/claude_mesh/meshgateway/src/main.c" "meshgateway/CMakeFiles/meshgateway.dir/src/main.c.o" "gcc" "meshgateway/CMakeFiles/meshgateway.dir/src/main.c.o.d"
   "/home/olkme/桌面/github-project/claude_mesh/meshgateway/src/tcp_server.c" "meshgateway/CMakeFiles/meshgateway.dir/src/tcp_server.c.o" "gcc" "meshgateway/CMakeFiles/meshgateway.dir/src/tcp_server.c.o.d"
+  "/home/olkme/桌面/github-project/claude_mesh/meshgateway/src/web_server.c" "meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.o" "gcc" "meshgateway/CMakeFiles/meshgateway.dir/src/web_server.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

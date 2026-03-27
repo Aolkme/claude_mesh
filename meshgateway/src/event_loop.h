@@ -6,6 +6,7 @@
 
 #include "config.h"
 #include "tcp_server.h"
+#include "web_server.h"
 #include "../libmeshcore/include/serial_port.h"
 #include "../libmeshcore/include/frame_parser.h"
 #include "../libmeshcore/include/proto_parser.h"
@@ -15,12 +16,13 @@
 #include <stdbool.h>
 
 typedef struct {
-    config_t       *cfg;
-    serial_port_t  *serial;
-    tcp_server_t   *tcp;
-    frame_parser_t *parser;
+    config_t        *cfg;
+    serial_port_t   *serial;
+    tcp_server_t    *tcp;
+    web_server_t    *web;     /* 可为 NULL（web 服务器未启用时）*/
+    frame_parser_t  *parser;
     gateway_state_t *gstate;
-    volatile bool  *running;  /* 主循环退出标志 */
+    volatile bool   *running;  /* 主循环退出标志 */
 } event_loop_t;
 
 /**

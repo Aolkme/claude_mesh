@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o"
+  "CMakeFiles/meshgateway.dir/__/third_party/mongoose/mongoose.c.o.d"
   "CMakeFiles/meshgateway.dir/src/command_handler.c.o"
   "CMakeFiles/meshgateway.dir/src/command_handler.c.o.d"
   "CMakeFiles/meshgateway.dir/src/config.c.o"
@@ -11,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/meshgateway.dir/src/main.c.o.d"
   "CMakeFiles/meshgateway.dir/src/tcp_server.c.o"
   "CMakeFiles/meshgateway.dir/src/tcp_server.c.o.d"
+  "CMakeFiles/meshgateway.dir/src/web_server.c.o"
+  "CMakeFiles/meshgateway.dir/src/web_server.c.o.d"
   "meshgateway"
   "meshgateway.pdb"
 )

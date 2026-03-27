@@ -175,6 +175,19 @@ protobuf-c-runtime/fast:
 .PHONY : protobuf-c-runtime/fast
 
 #=============================================================================
+# Target rules for targets named cjson
+
+# Build rule for target.
+cjson: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cjson
+.PHONY : cjson
+
+# fast build rule for target.
+cjson/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cjson.dir/build.make CMakeFiles/cjson.dir/build
+.PHONY : cjson/fast
+
+#=============================================================================
 # Target rules for targets named meshcore
 
 # Build rule for target.
@@ -237,6 +250,30 @@ protobuf-c-1.5.2/protobuf-c/protobuf-c.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuf-c-runtime.dir/build.make CMakeFiles/protobuf-c-runtime.dir/protobuf-c-1.5.2/protobuf-c/protobuf-c.c.s
 .PHONY : protobuf-c-1.5.2/protobuf-c/protobuf-c.c.s
 
+third_party/cJSON/cJSON.o: third_party/cJSON/cJSON.c.o
+.PHONY : third_party/cJSON/cJSON.o
+
+# target to build an object file
+third_party/cJSON/cJSON.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cjson.dir/build.make CMakeFiles/cjson.dir/third_party/cJSON/cJSON.c.o
+.PHONY : third_party/cJSON/cJSON.c.o
+
+third_party/cJSON/cJSON.i: third_party/cJSON/cJSON.c.i
+.PHONY : third_party/cJSON/cJSON.i
+
+# target to preprocess a source file
+third_party/cJSON/cJSON.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cjson.dir/build.make CMakeFiles/cjson.dir/third_party/cJSON/cJSON.c.i
+.PHONY : third_party/cJSON/cJSON.c.i
+
+third_party/cJSON/cJSON.s: third_party/cJSON/cJSON.c.s
+.PHONY : third_party/cJSON/cJSON.s
+
+# target to generate assembly for a file
+third_party/cJSON/cJSON.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cjson.dir/build.make CMakeFiles/cjson.dir/third_party/cJSON/cJSON.c.s
+.PHONY : third_party/cJSON/cJSON.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,6 +286,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... cjson"
 	@echo "... meshcore"
 	@echo "... meshgate-cli"
 	@echo "... meshgateway"
@@ -256,6 +294,9 @@ help:
 	@echo "... protobuf-c-1.5.2/protobuf-c/protobuf-c.o"
 	@echo "... protobuf-c-1.5.2/protobuf-c/protobuf-c.i"
 	@echo "... protobuf-c-1.5.2/protobuf-c/protobuf-c.s"
+	@echo "... third_party/cJSON/cJSON.o"
+	@echo "... third_party/cJSON/cJSON.i"
+	@echo "... third_party/cJSON/cJSON.s"
 .PHONY : help
 
 

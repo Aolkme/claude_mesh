@@ -124,6 +124,7 @@ meshgate-cli/meshgate-cli: meshgate-cli/CMakeFiles/meshgate-cli.dir/src/main.c.o
 meshgate-cli/meshgate-cli: meshgate-cli/CMakeFiles/meshgate-cli.dir/src/tcp_client.c.o
 meshgate-cli/meshgate-cli: meshgate-cli/CMakeFiles/meshgate-cli.dir/src/output_format.c.o
 meshgate-cli/meshgate-cli: meshgate-cli/CMakeFiles/meshgate-cli.dir/build.make
+meshgate-cli/meshgate-cli: libcjson.a
 meshgate-cli/meshgate-cli: meshgate-cli/CMakeFiles/meshgate-cli.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/olkme/桌面/github-project/claude_mesh/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable meshgate-cli"
 	cd /home/olkme/桌面/github-project/claude_mesh/build/meshgate-cli && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/meshgate-cli.dir/link.txt --verbose=$(VERBOSE)

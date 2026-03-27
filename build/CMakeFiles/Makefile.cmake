@@ -47,6 +47,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/protobuf-c-runtime.dir/DependInfo.cmake"
+  "CMakeFiles/cjson.dir/DependInfo.cmake"
   "libmeshcore/CMakeFiles/meshcore.dir/DependInfo.cmake"
   "meshgateway/CMakeFiles/meshgateway.dir/DependInfo.cmake"
   "meshgate-cli/CMakeFiles/meshgate-cli.dir/DependInfo.cmake"

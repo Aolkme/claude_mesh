@@ -39,6 +39,9 @@ libmeshcore/CMakeFiles/meshcore.dir/src/proto_parser.c.o: \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/xmodem.pb-c.h \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/admin.pb-c.h \
  /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/meshtastic/connection_status.pb-c.h \
+ /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/thingseye/privateconfig.pb-c.h \
+ /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/nanopb.pb-c.h \
+ /home/olkme/桌面/github-project/claude_mesh/protobufs_protobuf-c/google/protobuf/descriptor.pb-c.h \
  /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \

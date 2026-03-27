@@ -78,4 +78,5 @@ meshgate-cli/CMakeFiles/meshgate-cli.dir/src/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/olkme/桌面/github-project/claude_mesh/meshgate-cli/src/output_format.h
+ /home/olkme/桌面/github-project/claude_mesh/meshgate-cli/src/output_format.h \
+ /home/olkme/桌面/github-project/claude_mesh/third_party/cJSON/cJSON.h

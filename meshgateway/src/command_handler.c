@@ -1,190 +1,447 @@
 /**
  * command_handler.c - JSON 命令路由实现
  *
- * 使用极简手写 JSON 解析（避免引入额外依赖），
- * 输出使用 snprintf 构造 JSON 字符串。
+ * 使用 cJSON 解析请求和构造响应，覆盖所有核心命令。
+ * 帧头编码统一使用 frame_builder_encode()。
  */
 #include "command_handler.h"
+#include "config.h"
 #include "log.h"
 #include "../libmeshcore/include/node_manager.h"
 #include "../libmeshcore/include/proto_parser.h"
+#include "../libmeshcore/include/proto_builder.h"
+#include "../libmeshcore/include/admin_builder.h"
+#include "../libmeshcore/include/frame_builder.h"
+#include "../libmeshcore/include/serial_port.h"
 #include "../libmeshcore/include/mesh_types.h"
+#include "cJSON.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 
-/* ─── 极简 JSON 字段提取 ─── */
-/* 提取字符串字段值（返回静态 buf，线程不安全，足够单线程命令处理） */
-static const char *json_get_str(const char *json, const char *key, char *out, size_t out_len) {
-    char search[64];
-    snprintf(search, sizeof(search), "\"%s\"", key);
-    const char *p = strstr(json, search);
-    if (!p) return NULL;
-    p += strlen(search);
-    while (*p == ' ' || *p == ':' || *p == ' ') p++;
-    if (*p == '"') {
-        p++;
-        size_t i = 0;
-        while (*p && *p != '"' && i < out_len - 1) out[i++] = *p++;
-        out[i] = '\0';
-        return out;
-    }
-    return NULL;
+/* ─── 工具：序列化 cJSON 对象为字符串（调用者负责 free）─── */
+static char *json_to_str(cJSON *obj) {
+    char *s = cJSON_PrintUnformatted(obj);
+    cJSON_Delete(obj);
+    return s;
 }
 
-static int json_get_int(const char *json, const char *key, int def) {
-    char search[64];
-    snprintf(search, sizeof(search), "\"%s\"", key);
-    const char *p = strstr(json, search);
-    if (!p) return def;
-    p += strlen(search);
-    while (*p == ' ' || *p == ':' || *p == ' ') p++;
-    if (*p >= '0' && *p <= '9') return atoi(p);
-    return def;
+/* ─── 工具：错误响应 ─── */
+static char *err_resp(const char *msg) {
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status", "error");
+    cJSON_AddStringToObject(obj, "error", msg);
+    return json_to_str(obj);
 }
 
-/* ─── 命令处理函数 ─── */
+/* ─── 工具：向串口发送 proto buf（含 frame_builder 帧封装）─── */
+static bool send_proto(gateway_state_t *gs, const uint8_t *proto_buf, size_t proto_len) {
+    if (!gs->serial) return false;
+
+    uint8_t frame[4 + 512];
+    size_t  frame_len = 0;
+    if (frame_builder_encode(proto_buf, proto_len,
+                             frame, sizeof(frame), &frame_len) != MESH_OK)
+        return false;
+
+    return serial_port_write((serial_port_t *)gs->serial, frame, frame_len) >= 0;
+}
+
+/* ─────────────────── 命令实现 ─────────────────── */
 
 static char *cmd_get_status(gateway_state_t *gs) {
-    time_t now = time(NULL);
-    long uptime = (long)(now - gs->start_time);
-    int node_count = node_manager_get_count();
-    char node_id[MESH_NODE_ID_LEN] = "unknown";
-    if (gs->my_node_num) mesh_node_num_to_id(gs->my_node_num, node_id, sizeof(node_id));
+    time_t now    = time(NULL);
+    long   uptime = (long)(now - gs->start_time);
 
-    char *resp = (char *)malloc(512);
-    snprintf(resp, 512,
-        "{\"status\":\"ok\","
-        "\"connected\":%s,"
-        "\"my_node_id\":\"%s\","
-        "\"node_count\":%d,"
-        "\"rx_count\":%llu,"
-        "\"uptime_s\":%ld}",
-        gs->connected ? "true" : "false",
-        node_id,
-        node_count,
-        (unsigned long long)gs->rx_count,
-        uptime);
-    return resp;
+    const mesh_gateway_node_t *gw = node_manager_gateway();
+
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status",          "ok");
+    cJSON_AddBoolToObject  (obj, "connected",        gs->connected);
+    cJSON_AddStringToObject(obj, "my_node_id",       gw->node_id[0] ? gw->node_id : "unknown");
+    cJSON_AddBoolToObject  (obj, "config_complete",  gw->config_complete);
+    cJSON_AddNumberToObject(obj, "node_count",       node_manager_get_count());
+    cJSON_AddNumberToObject(obj, "rx_count",         (double)gs->rx_count);
+    cJSON_AddNumberToObject(obj, "uptime_s",         uptime);
+    if (gw->serial_connected)
+        cJSON_AddStringToObject(obj, "serial_device", gw->serial_device);
+    return json_to_str(obj);
+}
+
+static char *cmd_get_gateway_info(void) {
+    const mesh_gateway_node_t *gw = node_manager_gateway();
+
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status",           "ok");
+    cJSON_AddStringToObject(obj, "node_id",          gw->node_id);
+    cJSON_AddNumberToObject(obj, "node_num",         (double)gw->node_num);
+    cJSON_AddStringToObject(obj, "long_name",        gw->long_name);
+    cJSON_AddStringToObject(obj, "short_name",       gw->short_name);
+    cJSON_AddBoolToObject  (obj, "serial_connected", gw->serial_connected);
+    cJSON_AddBoolToObject  (obj, "config_complete",  gw->config_complete);
+    cJSON_AddStringToObject(obj, "serial_device",    gw->serial_device);
+    cJSON_AddBoolToObject  (obj, "has_keypair",      gw->has_keypair);
+    return json_to_str(obj);
 }
 
 static char *cmd_get_nodes(void) {
     mesh_node_t nodes[MESH_MAX_NODES];
     int count = node_manager_get_all(nodes, MESH_MAX_NODES);
 
-    /* 估算缓冲区大小：每个节点约 300 字节 */
-    size_t bufsz = 64 + count * 320;
-    char *resp = (char *)malloc(bufsz);
-    if (!resp) return NULL;
-
-    char *p = resp;
-    size_t rem = bufsz;
-    int n;
-
-    n = snprintf(p, rem, "{\"status\":\"ok\",\"count\":%d,\"nodes\":[", count);
-    p += n; rem -= (size_t)n;
+    cJSON *obj = cJSON_CreateObject();
+    cJSON *arr = cJSON_CreateArray();
+    cJSON_AddStringToObject(obj, "status", "ok");
+    cJSON_AddNumberToObject(obj, "count",  count);
 
     for (int i = 0; i < count; i++) {
         const mesh_node_t *nd = &nodes[i];
-        n = snprintf(p, rem,
-            "%s{\"node_id\":\"%s\","
-            "\"node_num\":%u,"
-            "\"long_name\":\"%s\","
-            "\"short_name\":\"%s\","
-            "\"snr\":%.1f,"
-            "\"battery\":%u,"
-            "\"last_heard\":%llu}",
-            i > 0 ? "," : "",
-            nd->node_id,
-            nd->node_num,
-            nd->long_name,
-            nd->short_name,
-            nd->snr,
-            nd->battery_level,
-            (unsigned long long)nd->last_heard_ms);
-        if (n > 0 && (size_t)n < rem) { p += n; rem -= (size_t)n; }
+        cJSON *n = cJSON_CreateObject();
+        cJSON_AddStringToObject(n, "node_id",    nd->node_id);
+        cJSON_AddNumberToObject(n, "node_num",   (double)nd->node_num);
+        cJSON_AddStringToObject(n, "long_name",  nd->long_name);
+        cJSON_AddStringToObject(n, "short_name", nd->short_name);
+        cJSON_AddNumberToObject(n, "battery",    nd->battery_level);
+        cJSON_AddNumberToObject(n, "voltage",    nd->voltage);
+        cJSON_AddNumberToObject(n, "snr",        nd->snr);
+        cJSON_AddNumberToObject(n, "rssi",       nd->rssi);
+        cJSON_AddNumberToObject(n, "hops_away",  nd->hops_away);
+        cJSON_AddNumberToObject(n, "last_heard", (double)nd->last_heard_ms);
+        cJSON_AddNumberToObject(n, "latitude",   nd->latitude);
+        cJSON_AddNumberToObject(n, "longitude",  nd->longitude);
+        cJSON_AddNumberToObject(n, "altitude",   nd->altitude);
+        cJSON_AddBoolToObject  (n, "is_enrolled",nd->is_enrolled);
+        cJSON_AddItemToArray(arr, n);
     }
-
-    n = snprintf(p, rem, "]}");
-    if (n > 0) { p += n; }
-    return resp;
+    cJSON_AddItemToObject(obj, "nodes", arr);
+    return json_to_str(obj);
 }
 
-static char *cmd_send_text(const char *json, gateway_state_t *gs) {
-    char to_id[MESH_NODE_ID_LEN] = "";
-    char text[256] = "";
+static char *cmd_get_node(cJSON *req) {
+    cJSON *jid = cJSON_GetObjectItemCaseSensitive(req, "node_id");
+    if (!cJSON_IsString(jid))
+        return err_resp("missing 'node_id'");
 
-    if (!json_get_str(json, "to",   to_id, sizeof(to_id)))
-        return strdup("{\"status\":\"error\",\"error\":\"missing 'to' field\"}");
-    if (!json_get_str(json, "text", text,  sizeof(text)))
-        return strdup("{\"status\":\"error\",\"error\":\"missing 'text' field\"}");
+    const mesh_node_t *nd = node_manager_get(jid->valuestring);
+    if (!nd)
+        return err_resp("node not found");
 
-    int channel = json_get_int(json, "channel", 0);
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status",                   "ok");
+    cJSON_AddStringToObject(obj, "node_id",                  nd->node_id);
+    cJSON_AddNumberToObject(obj, "node_num",                 (double)nd->node_num);
+    cJSON_AddStringToObject(obj, "long_name",                nd->long_name);
+    cJSON_AddStringToObject(obj, "short_name",               nd->short_name);
+    cJSON_AddNumberToObject(obj, "hw_model",                 nd->hw_model);
+    cJSON_AddNumberToObject(obj, "role",                     nd->role);
+    cJSON_AddNumberToObject(obj, "battery",                  nd->battery_level);
+    cJSON_AddNumberToObject(obj, "voltage",                  nd->voltage);
+    cJSON_AddNumberToObject(obj, "snr",                      nd->snr);
+    cJSON_AddNumberToObject(obj, "rssi",                     nd->rssi);
+    cJSON_AddNumberToObject(obj, "hops_away",                nd->hops_away);
+    cJSON_AddNumberToObject(obj, "uptime_s",                 (double)nd->uptime_seconds);
+    cJSON_AddNumberToObject(obj, "latitude",                 nd->latitude);
+    cJSON_AddNumberToObject(obj, "longitude",                nd->longitude);
+    cJSON_AddNumberToObject(obj, "altitude",                 nd->altitude);
+    cJSON_AddNumberToObject(obj, "last_heard",               (double)nd->last_heard_ms);
+    cJSON_AddNumberToObject(obj, "first_seen",               (double)nd->first_seen_ms);
+    cJSON_AddBoolToObject  (obj, "is_enrolled",              nd->is_enrolled);
+    cJSON_AddBoolToObject  (obj, "is_admin_key_set",         nd->is_admin_key_set);
+    cJSON_AddNumberToObject(obj, "private_config_version",   (double)nd->private_config_version);
+    cJSON_AddStringToObject(obj, "device_name",              nd->device_name);
+    return json_to_str(obj);
+}
 
-    /* 解析目标节点号 */
+static char *cmd_connect_serial(cJSON *req, gateway_state_t *gs) {
+    if (gs->serial)
+        return err_resp("already connected, disconnect first");
+
+    cJSON *jdev  = cJSON_GetObjectItemCaseSensitive(req, "device");
+    cJSON *jbaud = cJSON_GetObjectItemCaseSensitive(req, "baudrate");
+
+    if (!cJSON_IsString(jdev))
+        return err_resp("missing 'device'");
+
+    const char *device = jdev->valuestring;
+    uint32_t baud = cJSON_IsNumber(jbaud) ? (uint32_t)jbaud->valuedouble : 115200;
+
+    serial_port_t *sp = serial_port_open(device, baud);
+    if (!sp) {
+        LOG_ERROR("cmd_handler", "Cannot open serial port: %s", device);
+        return err_resp("failed to open serial port");
+    }
+
+    gs->serial    = sp;
+    gs->connected = true;
+    node_manager_gateway_set_connected(true, device, baud);
+
+    /* want_config 握手 */
+    uint8_t proto_buf[64];
+    size_t  proto_len = 0;
+    uint32_t config_id = (uint32_t)time(NULL);
+    if (proto_build_want_config(config_id, proto_buf, sizeof(proto_buf), &proto_len) == MESH_OK)
+        send_proto(gs, proto_buf, proto_len);
+
+    LOG_INFO("cmd_handler", "Serial connected: %s @ %u baud", device, baud);
+
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status",   "ok");
+    cJSON_AddStringToObject(obj, "device",   device);
+    cJSON_AddNumberToObject(obj, "baudrate", baud);
+    return json_to_str(obj);
+}
+
+static char *cmd_disconnect_serial(gateway_state_t *gs) {
+    if (!gs->serial)
+        return err_resp("not connected");
+
+    serial_port_close(gs->serial);
+    gs->serial    = NULL;
+    gs->connected = false;
+    node_manager_gateway_set_connected(false, "", 0);
+
+    LOG_INFO("cmd_handler", "Serial disconnected");
+
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status", "ok");
+    return json_to_str(obj);
+}
+
+static char *cmd_send_text(cJSON *req, gateway_state_t *gs) {
+    cJSON *jto   = cJSON_GetObjectItemCaseSensitive(req, "to");
+    cJSON *jtext = cJSON_GetObjectItemCaseSensitive(req, "text");
+    if (!cJSON_IsString(jto))   return err_resp("missing 'to'");
+    if (!cJSON_IsString(jtext)) return err_resp("missing 'text'");
+
+    const char *to_str = jto->valuestring;
+    const char *text   = jtext->valuestring;
+
+    cJSON *jch  = cJSON_GetObjectItemCaseSensitive(req, "channel");
+    cJSON *jack = cJSON_GetObjectItemCaseSensitive(req, "want_ack");
+    uint8_t channel  = cJSON_IsNumber(jch) ? (uint8_t)jch->valuedouble : 0;
+    bool    want_ack = cJSON_IsBool(jack)  ? (bool)jack->valueint : false;
+
     uint32_t to_num;
-    if (strcmp(to_id, "^all") == 0 || strcmp(to_id, MESH_BROADCAST_ID) == 0) {
+    if (strcmp(to_str, "^all") == 0 || strcmp(to_str, MESH_BROADCAST_ID) == 0)
         to_num = MESH_BROADCAST_NUM;
-    } else {
-        to_num = mesh_node_id_to_num(to_id);
-        if (to_num == 0)
-            return strdup("{\"status\":\"error\",\"error\":\"invalid 'to' node id\"}");
+    else {
+        to_num = mesh_node_id_to_num(to_str);
+        if (to_num == 0) return err_resp("invalid 'to' node id");
     }
 
-    if (!gs->connected || !gs->send_raw)
-        return strdup("{\"status\":\"error\",\"error\":\"not connected\"}");
+    if (!gs->connected || !gs->serial)
+        return err_resp("not connected");
 
-    uint8_t buf[512];
-    size_t out_len = 0;
-    mesh_error_t err = proto_build_text_packet(
-        gs->my_node_num, to_num, text, (uint8_t)channel, 0,
-        buf, sizeof(buf), &out_len);
+    uint8_t proto_buf[512];
+    size_t  proto_len = 0;
+    if (proto_build_text_packet(gs->my_node_num, to_num, text,
+                                channel, 3, want_ack, 0,
+                                proto_buf, sizeof(proto_buf), &proto_len) != MESH_OK)
+        return err_resp("proto_build_text failed");
 
-    if (err != MESH_OK)
-        return strdup("{\"status\":\"error\",\"error\":\"proto_build failed\"}");
+    if (!send_proto(gs, proto_buf, proto_len))
+        return err_resp("serial send failed");
 
-    /* 构造串口帧：0x94 0xC3 [len_h][len_l] [payload] */
-    uint8_t frame[520];
-    frame[0] = 0x94; frame[1] = 0xC3;
-    frame[2] = (uint8_t)(out_len >> 8);
-    frame[3] = (uint8_t)(out_len & 0xFF);
-    memcpy(frame + 4, buf, out_len);
-
-    gs->send_raw(frame, 4 + out_len, gs->send_ctx);
-
-    char *resp = (char *)malloc(128);
-    snprintf(resp, 128,
-        "{\"status\":\"ok\",\"to\":\"%s\",\"text\":\"%s\"}", to_id, text);
-    return resp;
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status", "ok");
+    cJSON_AddStringToObject(obj, "to",     to_str);
+    cJSON_AddStringToObject(obj, "text",   text);
+    return json_to_str(obj);
 }
 
-/* ─── 主入口 ─── */
+/* send_position */
+static char *cmd_send_position(cJSON *req, gateway_state_t *gs) {
+    cJSON *jto  = cJSON_GetObjectItemCaseSensitive(req, "to");
+    cJSON *jlat = cJSON_GetObjectItemCaseSensitive(req, "lat");
+    cJSON *jlon = cJSON_GetObjectItemCaseSensitive(req, "lon");
+    if (!cJSON_IsString(jto)) return err_resp("missing 'to'");
+    if (!cJSON_IsNumber(jlat)) return err_resp("missing 'lat'");
+    if (!cJSON_IsNumber(jlon)) return err_resp("missing 'lon'");
 
-char *command_handle(sock_t client_fd, const char *json, void *userdata) {
+    const char *to_str = jto->valuestring;
+    double lat = jlat->valuedouble;
+    double lon = jlon->valuedouble;
+    cJSON *jalt = cJSON_GetObjectItemCaseSensitive(req, "alt");
+    cJSON *jch  = cJSON_GetObjectItemCaseSensitive(req, "channel");
+    int32_t alt     = cJSON_IsNumber(jalt) ? (int32_t)jalt->valuedouble : 0;
+    uint8_t channel = cJSON_IsNumber(jch)  ? (uint8_t)jch->valuedouble  : 0;
+
+    uint32_t to_num;
+    if (strcmp(to_str, "^all") == 0 || strcmp(to_str, MESH_BROADCAST_ID) == 0)
+        to_num = MESH_BROADCAST_NUM;
+    else {
+        to_num = mesh_node_id_to_num(to_str);
+        if (to_num == 0) return err_resp("invalid 'to' node id");
+    }
+
+    if (!gs->connected || !gs->send_raw) return err_resp("not connected");
+
+    uint8_t proto_buf[512];
+    size_t  proto_len = 0;
+    if (proto_builder_position(gs->my_node_num, to_num, lat, lon, alt, channel,
+                                proto_buf, sizeof(proto_buf), &proto_len) != MESH_OK)
+        return err_resp("proto_build_position failed");
+
+    if (!send_proto(gs, proto_buf, proto_len))
+        return err_resp("serial send failed");
+
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status", "ok");
+    cJSON_AddStringToObject(obj, "to",     to_str);
+    cJSON_AddNumberToObject(obj, "lat",    lat);
+    cJSON_AddNumberToObject(obj, "lon",    lon);
+    cJSON_AddNumberToObject(obj, "alt",    alt);
+    return json_to_str(obj);
+}
+
+/* ─── Admin 命令公共：解析 node_id + passkey ─── */
+static bool parse_admin_params(cJSON *req, uint32_t *dest_num_out,
+                                uint32_t *passkey_out, char **err_out)
+{
+    cJSON *jnode = cJSON_GetObjectItemCaseSensitive(req, "node_id");
+    if (!cJSON_IsString(jnode)) { *err_out = "missing 'node_id'"; return false; }
+
+    uint32_t dest = mesh_node_id_to_num(jnode->valuestring);
+    if (dest == 0) { *err_out = "invalid 'node_id'"; return false; }
+
+    cJSON *jpk = cJSON_GetObjectItemCaseSensitive(req, "passkey");
+    *dest_num_out = dest;
+    *passkey_out  = cJSON_IsNumber(jpk) ? (uint32_t)jpk->valuedouble : 0;
+    return true;
+}
+
+/* admin_get_session_passkey */
+static char *cmd_admin_get_session_passkey(cJSON *req, gateway_state_t *gs) {
+    if (!gs->connected || !gs->send_raw) return err_resp("not connected");
+    uint32_t dest, passkey; char *errstr;
+    if (!parse_admin_params(req, &dest, &passkey, &errstr)) return err_resp(errstr);
+
+    uint8_t proto_buf[512]; size_t proto_len = 0;
+    if (admin_build_get_session_passkey(dest, gs->my_node_num,
+                                        proto_buf, sizeof(proto_buf), &proto_len) != MESH_OK)
+        return err_resp("admin_build failed");
+    if (!send_proto(gs, proto_buf, proto_len)) return err_resp("serial send failed");
+
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status", "ok");
+    cJSON_AddStringToObject(obj, "note", "response arrives via monitor event (portnum=6)");
+    return json_to_str(obj);
+}
+
+/* admin_get_config */
+static char *cmd_admin_get_config(cJSON *req, gateway_state_t *gs) {
+    if (!gs->connected || !gs->send_raw) return err_resp("not connected");
+    uint32_t dest, passkey; char *errstr;
+    if (!parse_admin_params(req, &dest, &passkey, &errstr)) return err_resp(errstr);
+
+    cJSON *jtype = cJSON_GetObjectItemCaseSensitive(req, "config_type");
+    uint32_t config_type = cJSON_IsNumber(jtype) ? (uint32_t)jtype->valuedouble : 0;
+
+    uint8_t proto_buf[512]; size_t proto_len = 0;
+    if (admin_build_get_config(dest, gs->my_node_num, config_type, passkey,
+                                proto_buf, sizeof(proto_buf), &proto_len) != MESH_OK)
+        return err_resp("admin_build failed");
+    if (!send_proto(gs, proto_buf, proto_len)) return err_resp("serial send failed");
+
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status", "ok");
+    cJSON_AddStringToObject(obj, "note", "response arrives via monitor event (portnum=6)");
+    return json_to_str(obj);
+}
+
+/* admin_get_channel */
+static char *cmd_admin_get_channel(cJSON *req, gateway_state_t *gs) {
+    if (!gs->connected || !gs->send_raw) return err_resp("not connected");
+    uint32_t dest, passkey; char *errstr;
+    if (!parse_admin_params(req, &dest, &passkey, &errstr)) return err_resp(errstr);
+
+    cJSON *jidx = cJSON_GetObjectItemCaseSensitive(req, "channel_index");
+    uint32_t ch_idx = cJSON_IsNumber(jidx) ? (uint32_t)jidx->valuedouble : 0;
+
+    uint8_t proto_buf[512]; size_t proto_len = 0;
+    if (admin_build_get_channel(dest, gs->my_node_num, ch_idx, passkey,
+                                 proto_buf, sizeof(proto_buf), &proto_len) != MESH_OK)
+        return err_resp("admin_build failed");
+    if (!send_proto(gs, proto_buf, proto_len)) return err_resp("serial send failed");
+
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status", "ok");
+    cJSON_AddStringToObject(obj, "note", "response arrives via monitor event (portnum=6)");
+    return json_to_str(obj);
+}
+
+/* admin_reboot */
+static char *cmd_admin_reboot(cJSON *req, gateway_state_t *gs) {
+    if (!gs->connected || !gs->send_raw) return err_resp("not connected");
+    uint32_t dest, passkey; char *errstr;
+    if (!parse_admin_params(req, &dest, &passkey, &errstr)) return err_resp(errstr);
+
+    cJSON *jdelay = cJSON_GetObjectItemCaseSensitive(req, "delay_s");
+    int32_t delay_s = cJSON_IsNumber(jdelay) ? (int32_t)jdelay->valuedouble : 5;
+
+    uint8_t proto_buf[512]; size_t proto_len = 0;
+    if (admin_build_reboot(dest, gs->my_node_num, delay_s, passkey,
+                            proto_buf, sizeof(proto_buf), &proto_len) != MESH_OK)
+        return err_resp("admin_build failed");
+    if (!send_proto(gs, proto_buf, proto_len)) return err_resp("serial send failed");
+
+    cJSON *obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "status", "ok");
+    cJSON_AddNumberToObject(obj, "delay_s", delay_s);
+    return json_to_str(obj);
+}
+
+/* ─────────────────── 主入口 ─────────────────── */
+
+char *command_handle(sock_t client_fd, const char *json_str, void *userdata) {
     (void)client_fd;
     gateway_state_t *gs = (gateway_state_t *)userdata;
 
-    char cmd[64] = "";
-    json_get_str(json, "cmd", cmd, sizeof(cmd));
-    LOG_DEBUG("cmd_handler", "cmd=%s json=%s", cmd, json);
+    cJSON *req = cJSON_Parse(json_str);
+    if (!req) {
+        LOG_WARN("cmd_handler", "JSON parse error: %.80s", json_str);
+        return err_resp("invalid JSON");
+    }
 
-    if (strcmp(cmd, "get_status") == 0)
-        return cmd_get_status(gs);
+    cJSON *jcmd = cJSON_GetObjectItemCaseSensitive(req, "cmd");
+    const char *cmd = cJSON_IsString(jcmd) ? jcmd->valuestring : "";
+    LOG_DEBUG("cmd_handler", "cmd=%s", cmd);
 
-    if (strcmp(cmd, "get_nodes") == 0)
-        return cmd_get_nodes();
+    char *resp = NULL;
 
-    if (strcmp(cmd, "send_text") == 0)
-        return cmd_send_text(json, gs);
+    if      (strcmp(cmd, "get_status")              == 0) resp = cmd_get_status(gs);
+    else if (strcmp(cmd, "get_gateway_info")         == 0) resp = cmd_get_gateway_info();
+    else if (strcmp(cmd, "get_nodes")                == 0) resp = cmd_get_nodes();
+    else if (strcmp(cmd, "get_node")                 == 0) resp = cmd_get_node(req);
+    else if (strcmp(cmd, "connect_serial")           == 0) resp = cmd_connect_serial(req, gs);
+    else if (strcmp(cmd, "disconnect_serial")        == 0) resp = cmd_disconnect_serial(gs);
+    else if (strcmp(cmd, "send_text")                == 0) resp = cmd_send_text(req, gs);
+    else if (strcmp(cmd, "send_position")            == 0) resp = cmd_send_position(req, gs);
+    else if (strcmp(cmd, "admin_get_session_passkey")== 0) resp = cmd_admin_get_session_passkey(req, gs);
+    else if (strcmp(cmd, "admin_get_config")         == 0) resp = cmd_admin_get_config(req, gs);
+    else if (strcmp(cmd, "admin_get_channel")        == 0) resp = cmd_admin_get_channel(req, gs);
+    else if (strcmp(cmd, "admin_reboot")             == 0) resp = cmd_admin_reboot(req, gs);
+    else if (strcmp(cmd, "monitor_start")    == 0) {
+        cJSON *o = cJSON_CreateObject();
+        cJSON_AddStringToObject(o, "status", "ok");
+        cJSON_AddBoolToObject(o, "monitor", true);
+        resp = json_to_str(o);
+    }
+    else if (strcmp(cmd, "monitor_stop")     == 0) {
+        cJSON *o = cJSON_CreateObject();
+        cJSON_AddStringToObject(o, "status", "ok");
+        cJSON_AddBoolToObject(o, "monitor", false);
+        resp = json_to_str(o);
+    }
+    else {
+        cJSON *o = cJSON_CreateObject();
+        char  msg[128];
+        snprintf(msg, sizeof(msg), "unknown cmd: %s", cmd);
+        cJSON_AddStringToObject(o, "status", "error");
+        cJSON_AddStringToObject(o, "error",  msg);
+        resp = json_to_str(o);
+    }
 
-    if (strcmp(cmd, "monitor_start") == 0)
-        return strdup("{\"status\":\"ok\",\"monitor\":true}");
-
-    if (strcmp(cmd, "monitor_stop") == 0)
-        return strdup("{\"status\":\"ok\",\"monitor\":false}");
-
-    char *resp = (char *)malloc(128);
-    snprintf(resp, 128, "{\"status\":\"error\",\"error\":\"unknown cmd: %s\"}", cmd);
+    cJSON_Delete(req);
     return resp;
 }

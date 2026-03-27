@@ -1,0 +1,22 @@
+[2026-03-26 16:57:28] [INFO ] [main      ] meshgateway starting (v1.0.0)
+[2026-03-26 16:57:28] [INFO ] [main      ] Config loaded from 'meshgateway.conf.example'
+[2026-03-26 16:57:28] [INFO ] [config    ] serial.device    = /dev/ttyUSB0
+[2026-03-26 16:57:28] [INFO ] [config    ] serial.baudrate  = 115200
+[2026-03-26 16:57:28] [INFO ] [config    ] network.host     = 127.0.0.1
+[2026-03-26 16:57:28] [INFO ] [config    ] network.port     = 9999
+[2026-03-26 16:57:28] [INFO ] [config    ] network.max_cli  = 16
+[2026-03-26 16:57:28] [INFO ] [config    ] heartbeat.interval= 600s
+[2026-03-26 16:57:28] [INFO ] [config    ] node.expire      = 3600s
+[2026-03-26 16:57:28] [ERROR] [tcp_server] bind() failed: 98
+[2026-03-26 16:57:28] [ERROR] [main      ] Cannot start TCP server on 127.0.0.1:9999
+[2026-03-26 19:11:45] [INFO ] [main      ] meshgateway starting (v1.0.0)
+[2026-03-26 19:11:45] [INFO ] [main      ] Config loaded from 'meshgateway.conf.example'
+[2026-03-26 19:11:45] [INFO ] [config    ] serial.device    = /dev/ttyUSB0
+[2026-03-26 19:11:45] [INFO ] [config    ] serial.baudrate  = 115200
+[2026-03-26 19:11:45] [INFO ] [config    ] network.host     = 127.0.0.1
+[2026-03-26 19:11:45] [INFO ] [config    ] network.port     = 9999
+[2026-03-26 19:11:45] [INFO ] [config    ] network.max_cli  = 16
+[2026-03-26 19:11:45] [INFO ] [config    ] heartbeat.interval= 600s
+[2026-03-26 19:11:45] [INFO ] [config    ] node.expire      = 3600s
+[2026-03-26 19:11:45] [ERROR] [tcp_server] bind() failed: 98
+[2026-03-26 19:11:45] [ERROR] [main      ] Cannot start TCP server on 127.0.0.1:9999
